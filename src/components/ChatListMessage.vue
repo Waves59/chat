@@ -9,10 +9,10 @@
 <script>
 import ChatMessage from '@/components/ChatMessage'
 export default {
-    props: ['messages'],
-    components: {
-        ChatMessage
-    }
+  props: ['messages'],
+  components: {
+    ChatMessage
+  }
 }
 </script>
 <style lang="stylus">
@@ -29,7 +29,7 @@ export default {
     section .scroll-list
         background:url(../assets/eye-bg-grey.svg) no-repeat;
         background-position center
-    ::-webkit-scrollbar { 
+    ::-webkit-scrollbar {
         display none
     }
 </style>

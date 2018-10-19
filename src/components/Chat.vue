@@ -11,19 +11,19 @@ import Sendbox from '@/components/Sendbox'
 import store from '../store'
 
 export default {
-    methods: {
-        onMessageSent(message) {
-            store.messages.push(message) 
-            this.$api.messageSend(message)    
-        }
-    },
-    computed: {
-        messages: () => store.messages
-    },
-    components: {
-        ChatListMessage,
-        Sendbox
-    },
+  methods: {
+    onMessageSent (message) {
+      store.messages.push(message)
+      this.$api.messageSend(message)
+    }
+  },
+  computed: {
+    messages: () => store.messages
+  },
+  components: {
+    ChatListMessage,
+    Sendbox
+  }
 
 }
 </script>

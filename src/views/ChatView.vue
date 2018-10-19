@@ -7,14 +7,14 @@
 
 <script>
 
-import Users from "@/components/Users"
-import Chat from "@/components/Chat"
+import Users from '@/components/Users'
+import Chat from '@/components/Chat'
 
 export default {
-    components: {
-        Users,
-        Chat
-    }    
+  components: {
+    Users,
+    Chat
+  }
 }
 
 </script>
@@ -25,4 +25,3 @@ export default {
         grid-template-columns: 35% 65%;
         grid-template-rows auto
 </style>
-

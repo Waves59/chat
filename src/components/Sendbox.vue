@@ -4,7 +4,7 @@
             <input type="text" v-model="input">
               <transition v-if="showModal" name="modal">
                 <div class="modal-mask">
-                
+
                 <div class="modal-wrapper">
                     <div class="modal-container">
 
@@ -41,39 +41,38 @@
     </div>
 </template>
 
-
 <script>
 export default {
-    data() {
-        return {
-            input: '',
-            life: 5,
-            whitelist: ['cc','fdp','connard','pd'],
-            showModal: false,
-            banned: false,
-        }
-    },
-    methods: {
-        onFormSubmit(){
-            if (this.whitelist.indexOf(this.input) > -1){
-                this.life--
-                this.showModal = true
-                console.log(this.life)
-                if(this.life == 0){
-                    this.banned
-                    this.life = 5
-                }
-            }
-            if (this.input != ''){
-                this.$emit('messageSent', this.input)
-                this.input = ''
-            }
-        },
-        closeModal(){
-            this.showModal = false
-            console.log('Modal fermer')
-        }
+  data () {
+    return {
+      input: '',
+      life: 5,
+      whitelist: ['cc', 'fdp', 'connard', 'pd'],
+      showModal: false,
+      banned: false
     }
+  },
+  methods: {
+    onFormSubmit () {
+      if (this.whitelist.indexOf(this.input) > -1) {
+        this.life--
+        this.showModal = true
+        console.log(this.life)
+        if (this.life == 0) {
+          this.banned
+          this.life = 5
+        }
+      }
+      if (this.input != '') {
+        this.$emit('messageSent', this.input)
+        this.input = ''
+      }
+    },
+    closeModal () {
+      this.showModal = false
+      console.log('Modal fermer')
+    }
+  }
 }
 </script>
 
@@ -103,7 +102,7 @@ export default {
         border: none
         background:url(../assets/send-icon.svg) no-repeat;
         background-position center
-    .modal-mask 
+    .modal-mask
         position: fixed;
         z-index: 9998;
         top: 0;
@@ -113,13 +112,12 @@ export default {
         background-color: rgba(0, 0, 0, .5);
         display: table;
         transition: opacity .3s ease;
-        
 
-    .modal-wrapper 
+    .modal-wrapper
         display: table-cell;
         vertical-align: middle;
 
-    .modal-container 
+    .modal-container
         width: 500px;
         margin: 0px auto;
         padding: 20px 30px;
@@ -129,7 +127,7 @@ export default {
         box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
         transition: all .3s ease;
         font-family: Helvetica, Arial, sans-serif;
-        
+
     .modal-default-button
         background-image: none
         color white
@@ -138,7 +136,7 @@ export default {
     .modal-header
         margin-top: 0;
         color: #fbea4e;
-    
+
     .modal-body
         color #fbea4e
 
@@ -234,5 +232,4 @@ export default {
         transform: rotateY(0.01deg);
     }
 
-        
 </style>

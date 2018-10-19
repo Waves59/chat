@@ -10,19 +10,19 @@
 </template>
 
 <script>
-import TopUser from "@/components/TopUser"
-import User from "@/components/User"
-import store from "../store"
+import TopUser from '@/components/TopUser'
+import User from '@/components/User'
+import store from '../store'
 export default {
 
-    components: {
-        User,
-        TopUser
-    },
-    computed: {
-        users: () => store.users,
-        user: () => store.user
-    }
+  components: {
+    User,
+    TopUser
+  },
+  computed: {
+    users: () => store.users,
+    user: () => store.user
+  }
 }
 </script>
 
@@ -31,4 +31,3 @@ export default {
         height 100%
         background-color #323232
 </style>
-

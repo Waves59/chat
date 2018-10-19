@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    props: ['user']
+  props: ['user']
 }
 </script>
 
@@ -19,8 +19,8 @@ export default {
         background-position center
         color #fbea4e!important
         margin-top 10px
-        font-size 1.5em 
-        font-weight 800 
+        font-size 1.5em
+        font-weight 800
         color: #ffffff
         height 100px
         background-size: 140px;

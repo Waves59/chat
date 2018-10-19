@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    props: ['user']
+  props: ['user']
 }
 </script>
 
@@ -36,5 +36,3 @@ export default {
     .usern
         margin-left 10px
 </style>
-
-
